@@ -43,10 +43,137 @@ p {
     text-wrap: balance;
 }
 
-/*end of css rest/
+/*end of css rest*/
 
-.roboto-light {
-  font-family: "Roboto", serif;
-  font-weight: 300;
-  font-style: normal;
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: "Roboto", serif;
+}
+
+.container {
+    max-width: 23.438rem;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    padding: 1.25rem 1.563rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 800;
+    margin-top: 0.438rem;
+    margin-bottom: 0.813rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 400;
+}
+
+ul {
+    padding: 0.813rem 0rem 1.563rem 0rem;
+    list-style-type: none;
+}
+
+li::before {
+    content: url(images/icon-list.svg);
+    margin-right: 0.625rem;
+    margin-bottom: 0.313rem;
+    position: relative;
+    top: 0.188rem;
+}
+
+li {
+    margin-top: 0.625rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 400;
+}
+
+label {
+    font-size: 0.813rem;
+    color: var(--Charcoal-Grey);
+    font-weight: 700;
+}
+
+.email-input {
+    width: 90%;
+    border-radius: 0.375rem;
+    background-color: var(--White);
+    border: 1px solid var(--Grey);
+    color: var(--Grey);
+    padding: 0.813rem 0.938rem 0.813rem 1rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0.313rem;
+    font-size: 0.938rem;
+}
+
+.submit-button {
+    width: 100%;
+    border-radius: 0.375rem;
+    background-color: var(--Charcoal-Grey);
+    border: 1px solid var(--Charcoal-Grey);
+    color: var(--White);
+    padding: 0.813rem;
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
+@media only screen and (min-width:59.25rem) {
+     body {
+        background-color: var(--Dark-Slate-Grey);
+        justify-content: center;
+     }
+    .container {
+        max-width: 58rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40rem;
+        height: auto;
+        border-radius: 1.563rem;
+    }
+    .picuture-part {
+        grid-column: 2/3;
+        grid-row: -2/-1;
+    }
+
+    main {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .img-responsive {
+        padding-left: 2.5rem;
+    }
+
+    .submit-button {
+        width: 98%;
+    }
+
+    main {
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    }
+
+    h1 {
+        font-size: 3.375rem;
+    }
+
+    p, li {
+        font-size: 1.125rem;
+    }
 }
