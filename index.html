@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <div class="picture-part">
       <picture>
         <source media="(min-width:59.25rem)" srcset="images/illustration-sign-up-desktop.svg" />
@@ -28,13 +28,25 @@
         <li>Measuring to ensure updates are a success</li>
         <li>And much more!</li>
       </ul>
-      <form>
+      <form id="formSubmit">
+        <div class="form-part">
         <label for="email">Email address</label>
-        <input type="email" value="email@company.com" class="email-input" />
-        <input type="submit" value="Subscribe to monthly newsletter" class="submit-button" />
+        <p class="error-paragraph" id="error">Valid email required</p>
+      </div>
+        <input type="email" placeholder="email@company.com" class="email-input" id="emailInput" required/>
+        <input type="submit" value="Subscribe to monthly newsletter" class="submit-button" id="submitButton" />
       </form>
     </main>
    </div>
   </div>
-</body>
+  <div class="success-container" id="successContainer">
+    <img src="images/icon-success.svg" alt="success" class="icon-success" />
+    <h1 class="heading-container">Thanks for Subscribing!</h1>
+    <p class="success-paragraph" id="emailPragraph">A confirmation email has been sent to ash@loremcompany.com. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="dismissButton" class="dismiss-button">Dismiss message</button>
+  </div>
+  <script src="main.js"></script> 
+</body> 
 </html>

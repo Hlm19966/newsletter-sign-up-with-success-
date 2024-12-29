@@ -65,6 +65,7 @@ body{
     height: 100vh;
 }
 
+
 main {
     padding: 1.25rem 1.563rem;
 }
@@ -111,6 +112,18 @@ label {
     font-weight: 700;
 }
 
+.form-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-paragraph {
+    display: none;
+    font-size: 0.813rem;
+    color: var(--Tomato);
+    font-weight: 700;
+}
+
 .email-input {
     width: 90%;
     border-radius: 0.375rem;
@@ -121,6 +134,13 @@ label {
     margin-bottom: 1.25rem;
     margin-top: 0.313rem;
     font-size: 0.938rem;
+    cursor: pointer;
+}
+
+.email-input-valid {
+    border: 1px solid var(--Tomato);
+    background-color: hsla(4, 100%, 67%, 0.525); 
+    color: var(--Tomato);
 }
 
 .submit-button {
@@ -132,6 +152,30 @@ label {
     padding: 0.813rem;
     font-size: 0.938rem;
     font-weight: 400;
+    cursor: pointer;
+}
+
+.success-container {
+    display: none;
+    flex-direction: column;
+    border-radius: 0.938rem;
+    max-width: 23.438rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    color: var(--Charcoal-Grey);
+    background-color: var(--White);
+}
+
+.dismiss-button {
+    width: 100%;
+    border-radius: 0.375rem;
+    background-color: var(--Dark-Slate-Grey);
+    border: 1px solid var(--Dark-Slate-Grey);
+    color: var(--White);
+    padding: 0.813rem;
+    font-size: 0.938rem;
+    font-weight: 400;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:59.25rem) {
@@ -163,6 +207,16 @@ label {
 
     .submit-button {
         width: 98%;
+        transition: transform 450ms linear;
+        will-change: transform;
+    }
+    
+    .submit-button:hover {
+        background-color: var(--Tomato);
+        transform: scale(1.1);
+        border: 1px solid var(--Tomato);
+        border-radius: 0.375rem;
+        box-shadow: var(--Tomato) 0px 30px 60px -25px, var(--Tomato) 0px 18px 36px -18px;
     }
 
     main {
@@ -175,5 +229,30 @@ label {
 
     p, li {
         font-size: 1.125rem;
+    }
+
+    .success-container {
+     padding: 1.938rem;
+    }
+
+    .error-paragraph {
+        margin-right: 0.625rem;
+    }
+
+    .heading-container {
+        font-size: 2.813rem;
+        line-height: 1.1;
+        margin-top: 1.563rem;
+        margin-bottom: 1.188rem;
+    }
+
+    .success-paragraph {
+        font-size: 0.938rem;
+        font-weight: 400;
+        margin-bottom: 1.875rem;
+    }
+
+    .dismiss-button {
+        margin-bottom: 1.875rem;
     }
 }
