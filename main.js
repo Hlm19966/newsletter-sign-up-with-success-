@@ -5,6 +5,7 @@ const successContainer = document.querySelector("#successContainer");
 const emailParagraph = document.querySelector("#emailParagraph");
 const dismissButton = document.querySelector("#dismissButton");
 const container = document.querySelector("#container");
+const userEmail = document.querySelector("#userEmail");
 
 formSubmit.addEventListener("submit", (event)=>{
   event.preventDefault();
@@ -15,6 +16,7 @@ formSubmit.addEventListener("submit", (event)=>{
   if (isValidEmail) { 
     container.style.display = "none";
     successContainer.style.display = "block";
+    userEmail.innerHTML = `${email}`;
   } else {
     errorPragraph.style.display = "block";
     emailInput.classList.add('email-input-valid');
