@@ -12,8 +12,7 @@ formSubmit.addEventListener("submit", (event)=>{
   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   console.log(isValidEmail);
 
-  if (isValidEmail) {
-    
+  if (isValidEmail) { 
     container.style.display = "none";
     successContainer.style.display = "block";
   } else {
@@ -23,3 +22,10 @@ formSubmit.addEventListener("submit", (event)=>{
 });
 
 
+dismissButton.addEventListener("click", (event)=> {
+  event.preventDefault();
+  container.style.display = "grid";
+  successContainer.style.display = "none";
+  emailInput.value ="";
+  emailInput.classList.remove('email-input-valid');
+});
